@@ -247,11 +247,42 @@ The Santana PS10 may include EGR system components for emission control. Detaile
 | Item | Specification | Notes |
 |---|---|---|
 | Primary Model | MITSUBISHI TF0 HM 13 T-6 | Standard |
-| Alternative Model | MITSUBISHI TD04 | Optional variant |
+| Alternative Model | MITSUBISHI TD04L | Confirmed on vehicle (see below) |
+| Iveco P/N | 500372214 | Stamped on turbo housing |
+| Mitsubishi MFD | 49377-07000 | Stamped on turbo housing |
+| Superseded P/N | 49377-07010 | Interchangeable |
 | Maximum Turbine Speed | 80,000+ RPM | Typical operating range |
 | Boost Pressure Limit | Mechanical waste gate control | Protects engine |
 | Lubrication | Engine oil circulation | Full pressure supply |
 | Cooling | Oil cooler and exhaust back pressure | Critical for longevity |
+
+### Wastegate Actuator Details
+
+**Type:** Internal wastegate with mechanical actuator (diaphragm + spring)
+**Connection:** Actuator arm attached to wastegate flap via screw thread with nut (adjustable)
+
+**Operating principle:**
+- At rest / low boost: spring holds actuator rod **retracted (in)** → wastegate flap **closed** → all exhaust drives turbine
+- As boost rises: pressure acts on diaphragm → rod extends **out** → opens wastegate flap → exhaust bypasses turbine → limits boost
+- Rod stuck out = wastegate permanently open = underboost + exhaust whistle (typically audible at 2000-2500 RPM / ~100 km/h)
+
+**Replacement actuator:** Search for "49377-07000 wastegate actuator" or "49377-07010 actuator" — actuator-only replacements are available (€30-85). Ensure replacement has same boost pressure rating (bar) as original.
+
+### Wastegate Maintenance
+
+- **Lubrication:** Use MoS2 (molybdenum disulfide) penetrating oil on the wastegate pivot and actuator rod. Do NOT use silicone oil — it burns off at exhaust temperatures.
+- **Inspection:** Periodically check that actuator rod moves freely with spring resistance. Rod should retract when released.
+- **Common failure:** Actuator rod or pivot seizes due to carbon/soot buildup and heat cycling. Symptoms: loss of boost, exhaust whistle at mid-RPM.
+
+---
+
+### Wastegate Issue Log (24-BX-HS)
+
+**Date:** April 2026 (~121,400 km)
+**Symptom:** Whistling sound at ~100 km/h / 2000-2500 RPM
+**Diagnosis:** Wastegate actuator rod stuck in extended (out) position, holding wastegate flap permanently open. Wastegate valve flap moves freely when actuator disconnected — problem is inside the actuator (seized rod or failed diaphragm/spring).
+**Temporary fix:** MoS2 penetrating oil applied to actuator rod and pivot, worked rod back and forth to free it.
+**Permanent fix:** Replace wastegate actuator (49377-07000 / 49377-07010 compatible).
 
 ---
 
