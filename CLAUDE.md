@@ -84,8 +84,9 @@ Santana catalog numbers often differ from the underlying Iveco, Bosch, or other 
 ## Active Projects
 
 Check `Projects/*/README.md` for current project state. Active projects:
-- **Cruise Control Retrofit** - `Projects/Cruise Control Retrofit/`
-- **Turbo Investigation** - `Projects/Turbo Investigation/`
+- **Cruise Control Retrofit** - `Projects/Cruise Control Retrofit/` (blocked by speedometer fix)
+- **Turbo Investigation** - `Projects/Turbo Investigation/` (wastegate flutter after freeing)
+- **Speedometer Issue** - `Projects/Speedometer Issue/` (heat-related drift, blocks cruise control)
 
 ## Where Context Lives
 

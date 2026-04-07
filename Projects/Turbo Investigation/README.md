@@ -1,40 +1,46 @@
 # Turbo Investigation - Santana PS10 (24-BX-HS)
 
-Investigating stuck wastegate, boost leaks, and whistle noise.
+Investigating wastegate flutter, boost leaks, and whistle noise.
 
-## Turbocharger Identification
+## Turbo Confirmed
 
-Two turbo variants exist for the PS10 per the Parts Catalogue (FIG.21):
-- **TYPE 1:** Santana P/N A240013-010, likely Mitsubishi TF035HM-13T-6
-- **TYPE 2:** Santana P/N A240016-000, likely Mitsubishi TD04
+**Mitsubishi TD04L** (was uncertain before, now confirmed by reading the plate):
+- Mitsubishi MFD: 49377-07000 (superseded by 49377-07010)
+- Iveco P/N: 500372214
+- Santana P/N: A240016-000 (TYPE 2 per Parts Catalogue FIG.21)
 
-Label on the turbo is too dirty to read. Need to clean the ID plate on the compressor housing (cold side) with brake cleaner and brass brush. Key identifier: part number prefix 49135 = TF035, 49377 = TD04.
+## Wastegate Issue
 
-## Stuck Wastegate
+**Problem:** Actuator rod was stuck extended (out) = wastegate flap held permanently open = underboost + flutter/whistle at 2000-2500 RPM / ~100 km/h under load. Stops when lifting throttle.
 
-Wastegate actuator is pneumatic (boost pressure operated via hose from compressor to diaphragm canister with rod). The rod is stuck and won't move by hand. Most likely cause: carbon/soot seizure at the wastegate flap pivot inside the turbine housing.
+**Temporary fix (April 2026, ~121,400 km):** Freed with MoS2 penetrating oil (not silicone, which burns off at exhaust temps). Worked rod back and forth.
 
-A stuck-closed wastegate means unregulated boost pressure. This is the primary concern.
+**Current status:** Still fluttering after refit. Likely the flap is not seating fully due to actuator angle or weak spring.
 
-## Wastegate Actuator Hose and Boost Leak (2026-04-02)
+**Fixes to try:**
+- Adjust rod nut (one full turn increments)
+- Add steel spacers/washers to actuator bracket for finer adjustment
+- Do NOT weld or permanently close the wastegate; no boost limit = engine damage
+- At steady 100 km/h the wastegate should be mostly closed; flutter = flap chattering at threshold
 
-Pressure-tested the boost hose system at 0.5 bar and found:
-- **Leak on a larger boost hose**, plan is to patch for now
-- **Smaller wastegate actuator reference hose**, diameter not specified in any Santana manual. Typical TD04/TF035 wastegate hose is ~4mm ID. The hoses expanded visibly at 0.5 bar, indicating age degradation.
-- **Wastegate actuator test plan:** apply ~1 bar to the actuator to check for rod movement. Expected crack pressure is 0.7-1.0 bar. Do not exceed 1.5 bar (diaphragm risk).
-- Replacement hose should be silicone, rated for 3+ bar boost pressure.
+Note: slight play on the flap pivot is normal.
 
-## Boost Whistle Noise
+**Permanent fix:** Replace wastegate actuator (~EUR 85 from Depotop.com, or EUR 30-80 on eBay/AliExpress). Must match original boost pressure rating.
 
-New whistle above 2000 RPM under load, mainly at ~100 km/h, disappears instantly off-throttle. Audible from right side / passenger footwell area. Garage said "normal, no leaks" but this diagnosis is likely wrong.
+## Boost Leaks
 
-Found a very small leak at the intercooler-to-intake hose (soft breeze, not audible, under 0.5 bar test pressure). Also found a larger hose leak during further pressure testing.
+Pressure-tested at 0.5 bar and found:
+- Leak on a larger boost hose (patched)
+- Very small leak at intercooler-to-intake hose
+- Wastegate actuator reference hose (~4mm ID) expanded visibly, indicating age degradation; replace with silicone rated for 3+ bar
 
-**Conclusion:** Multiple small boost leaks confirmed. The stuck wastegate combined with degraded hoses are the likely cause.
+## Boost Gauge
+
+Recommended: mechanical 0-2 bar gauge, tee into wastegate actuator pressure line. Confirms actual boost and wastegate behavior. Shows both vacuum (off-throttle) and boost (under load).
 
 ## Next Steps
 
-1. Patch big hose leak
-2. Test wastegate actuator at 1 bar
-3. Reassess whistle after fixes
-4. Clean and read turbo ID plate
+1. Adjust wastegate rod nut / try spacers to eliminate flutter
+2. If flutter persists, replace actuator (~EUR 85)
+3. Install boost gauge to verify behavior
+4. Replace degraded boost hoses with silicone
