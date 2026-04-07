@@ -21,3 +21,17 @@ The ECU already supports cruise control. Brake and clutch switches are already w
 6. Test
 
 Minimum viable: just wire pin 33 (SET+) for "hold current speed". Brake/clutch cancel automatically.
+
+## Key Technical Details
+
+**Pin 32 (cable 8154) uses normally-closed logic.** Continuous 12V = system armed. 0V = system off + stored speed erased. Source: Iveco forum t8593 and Aufbauherstellerschulung document.
+
+**Recommended wiring:** Wire pin 32 permanently to fused 12V ignition (no toggle needed). System arms with key, disarms with key. Brake/clutch cancel safely. Only 3 momentary buttons needed: SET+ (pin 33), SET- (pin 1), RES (pin 25).
+
+**Decision:** Simple permanent wire on pin 32 (preferred over toggle switch).
+
+## Background
+
+- Forum evidence: 140+ posts confirm every electronically-injected 1999-2006 Daily III worked plug-and-play. No ECU coding needed. PS10 has the same MS 6.3 EDC with 8140.43P engine.
+- **Fallback if not enabled:** Send ECU to specialist (ECU Connection UK, ~EUR 150-300) for 24C16 EEPROM bench programming. 38-pin round diagnostic connector with K-Line protocol; standard OBD tools don't work.
+- **Why:** Highway cruise comfort. No stalk fits PS10 column.

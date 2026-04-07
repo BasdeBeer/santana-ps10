@@ -72,3 +72,27 @@ These are the original manuals to read when verification is needed:
 
 ## Maintenance Context
 At 120,000 km the vehicle has completed a full maintenance cycle. The next cycle repeats from the beginning of the schedule. Key upcoming items mirror the 15,000 km service interval items.
+
+## Working Preferences
+
+### No Hallucination (reinforces the #1 rule above)
+Never guess specifications, part numbers, torque values, or repair procedures. The owner works on this vehicle themselves; incorrect values could cause real damage. Layer answers with clearly labeled sources: (1) general knowledge about the platform, (2) Knowledge Base extracts, (3) verified from original PDF pages, (4) web search. If something cannot be verified, say so explicitly. Always offer to check the original PDF when the user needs certainty.
+
+### Part Number Cross-Referencing
+Santana catalog numbers often differ from the underlying Iveco, Bosch, or other OEM part numbers for the same component. When looking up parts, always search by both Santana and OEM numbers. When presenting part information, show both numbers where available. Using only one numbering system may miss available parts or lead to ordering wrong components.
+
+## Active Projects
+
+Check `Projects/*/README.md` for current project state. Active projects:
+- **Cruise Control Retrofit** - `Projects/Cruise Control Retrofit/`
+- **Turbo Investigation** - `Projects/Turbo Investigation/`
+
+## Where Context Lives
+
+| Location | Contains |
+|----------|----------|
+| This file (`CLAUDE.md`) | Behavioral rules, vehicle specs, lookup instructions |
+| `Projects/*/README.md` | Active project state, decisions, next steps |
+| `Knowledge Base/Owner/` | Owner-specific data (oil choice, preferences) |
+| `Knowledge Base/` | Vehicle technical data extracted from manuals |
+| `Manuals/` | Original source PDFs (source of truth) |
